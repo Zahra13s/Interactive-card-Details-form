@@ -1,0 +1,93 @@
+body{
+    color: white;
+    margin: 0;
+    background: linear-gradient(91.7deg, rgb(50, 25, 79) -4.3%, rgb(122, 101, 149) 101.8%);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container{
+    width: 80%;
+    height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #00000025;
+}
+
+.card-container .card,
+.card-container .inputs{
+    flex: 1;
+}
+
+.card-container .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body{
+    width: 450px;
+    height: 284px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+input{
+    width: 100%;
+    border-radius: 7px;
+    padding: 7px;
+    margin: 10px 0px 15px 0px;
+    border: none;
+    display: block;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputs .name,
+.inputs .number,
+.inputs .infos,
+.inputs .btn{
+    width: 50%;
+    margin-top: 15px;
+}
+
+.infos,
+.infos .time .input{
+    display: flex;
+}
+
+.infos .time .input input{
+    margin-right: 10px;
+}
+
+.infos .time,
+.infos .code{
+    flex: 1;
+}
+
+.inputs .btn{
+    width: 25%;
+}
+
+@media (max-width:1333px){
+    label{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:1169px){
+
+    label{
+        font-size: 12px;
+    }
+}

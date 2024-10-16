@@ -4,46 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Interactive card Details form</title>
+    <title>Interactive Card form</title>
   </head>
   <body>
     <div class="container">
       <div class="card-container">
         <div class="card">
-            <div class="card-body"></div>
+          <div class="card-number" id="num-display">XXXX XXXX XXXX XXXX</div>
+          <div class="infos">
+            <div class="card-name" id="name-display">John Doe</div>
+            <div class="card-exp" id="exp-display">
+              <span id="month-display">00</span>
+              /<span id="year-display">00</span></div>
+          </div>
         </div>
-   
-      <div class="inputs">
-        <!-- name -->
-        <div class="name">
-          <label for="">Card Holder's Name</label>
-          <input type="text" placeholder="John Doe"/>
-        </div>
-        <!-- number -->
-        <div class="number">
+      </div>
+      <div class="card-infos">
+        <div class="inputs">
+          <!-- name -->
+          <div class="name">
+            <label for="">Name</label>
+            <input type="text" id="name"/>
+          </div>
+          <!-- number -->
+          <div class="number">
             <label for="">Card Number</label>
-          <input type="text" placeholder="0000 0000 0000 0000"/>
-        </div>
-        <!-- infos -->
-        <div class="infos">
-          <div class="time">
-            <label for="">EXP. Date(MM/YY)</label>
-            <div class="input">
-                <input type="text" placeholder="MM" id="month"/>
-            <input type="text" placeholder="YY"/>
+            <input type="text" id="number"/>
+          </div>
+          <!-- date and security code -->
+          <div class="date-security">
+            <div class="date">
+              <!-- month -->
+              <div class="month">
+                <label for="">Exp. Date (MM/YY)</label>
+                <div class="mm-yy">
+                  <input type="text" id="mm"/>
+                  <input type="text" id="yy"/>
+                </div>
+              </div>
             </div>
+            <!-- security code -->
+            <div class="code">
+              <label for="">CYC</label>
+              <input type="text" id="code">
+             </div>
           </div>
-          <div class="code">
-            <label for="">CYC</label>
-            <input type="text" placeholder="e.g, 123"/>
-          </div>
-        </div>
-        <!-- btn -->
-        <div class="btn">
-          <input type="submit" value="Submit" />
+          <!-- button -->
+           <div class="button">
+            <button id="submit" id="add" onclick="addCardDetails()">Send</button>
+           </div>
         </div>
       </div>
     </div>
-    </div>
   </body>
+  <script src="app.js"></script>
 </html>

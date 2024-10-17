@@ -29,7 +29,8 @@
           <!-- number -->
           <div class="number">
             <label for="">Card Number</label>
-            <input type="text" id="number"/>
+            <input type="text" id="number" maxlength="19"/>
+            <small id="number-validation">Invalid Card Number</small>
           </div>
           <!-- date and security code -->
           <div class="date-security">
@@ -38,15 +39,18 @@
               <div class="month">
                 <label for="">Exp. Date (MM/YY)</label>
                 <div class="mm-yy">
-                  <input type="text" id="mm"/>
-                  <input type="text" id="yy"/>
+                  <input type="text" id="mm" maxlength="2"/>
+                  <input type="text" id="yy" maxlength="2"/>
+                  
                 </div>
+                <small id="month-validation">Invalid Month</small>
+                <small id="year-validation">Expired Card</small>
               </div>
             </div>
             <!-- security code -->
             <div class="code">
               <label for="">CYC</label>
-              <input type="text" id="code">
+              <input type="text" id="code" maxlength="3">
              </div>
           </div>
           <!-- button -->

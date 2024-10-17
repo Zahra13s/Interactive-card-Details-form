@@ -94,6 +94,11 @@ button{
     border: 1px solid black;
 }
 
+small{
+    color: red;
+    display: none;
+}
+
 @media (max-width: 895px) {
     .container{
         width: 100vw;

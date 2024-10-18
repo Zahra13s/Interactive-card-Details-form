@@ -9,13 +9,25 @@
   <body>
     <div class="container">
       <div class="card-container">
-        <div class="card">
-          <div class="card-number" id="num-display">XXXX XXXX XXXX XXXX</div>
-          <div class="infos">
-            <div class="card-name" id="name-display">John Doe</div>
-            <div class="card-exp" id="exp-display">
-              <span id="month-display">00</span>
-              /<span id="year-display">00</span></div>
+        <div class="card" id="flip-card">
+          <div class="card-front">
+            <img src="mastercard.png" alt="" class="card-logo">
+            <img src="chip.png" alt="" class="card-chip">
+            <div class="card-number" id="num-display">**** **** **** ****</div>
+            <div class="infos">
+              <div class="card-name" id="name-display">John Doe</div>
+              <div class="card-exp" id="exp-display">
+                <span id="month-display">00</span>
+                /<span id="year-display">00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-back">
+            <div class="strip"></div>
+            <div class="security"><span id="code-display">000</span></div>
+            <small id="security-validation">Invalid Code</small>
+            <div class="lines"></div>
           </div>
         </div>
       </div>
@@ -29,7 +41,7 @@
           <!-- number -->
           <div class="number">
             <label for="">Card Number</label>
-            <input type="text" id="number" maxlength="19"/>
+            <input type="text" id="number" maxlength="16" minlength="16"/>
             <small id="number-validation">Invalid Card Number</small>
           </div>
           <!-- date and security code -->
@@ -39,27 +51,30 @@
               <div class="month">
                 <label for="">Exp. Date (MM/YY)</label>
                 <div class="mm-yy">
-                  <input type="text" id="mm" maxlength="2"/>
-                  <input type="text" id="yy" maxlength="2"/>
-                  
+                  <input type="text" id="mm" maxlength="2" />
+                  <input type="text" id="yy" maxlength="2" />
                 </div>
-                <small id="month-validation">Invalid Month</small>
-                <small id="year-validation">Expired Card</small>
+                <small id="date-validation">Invalid Month</small>
+                <small id="exp-validation">Expired Card</small>
               </div>
             </div>
             <!-- security code -->
             <div class="code">
-              <label for="">CYC</label>
-              <input type="text" id="code" maxlength="3">
-             </div>
+              <label for="">CVC</label>
+              <input type="text" id="code" maxlength="3" />
+              <small id="code-validation">Invalid Security Code</small>
+            </div>
           </div>
           <!-- button -->
-           <div class="button">
-            <button id="submit" id="add" onclick="addCardDetails()">Send</button>
-           </div>
+          <div class="button">
+            <button id="submit" id="add" onclick="addCardDetails()">
+              Send
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="app.js"></script>
 </html>
